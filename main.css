@@ -1,15 +1,15 @@
-.coupon-wrapper {
-  margin-top: 350px;
+.v-code-wrapper {
+  margin-top: 250px;
   background-color: #fff;
   text-align: center;
 }
 
-.coupon-wrapper .code-input-box {
+.v-code-wrapper .code-input-box {
   color: #2e2f33;
   font-size: 16px;
 }
 
-.coupon-wrapper .code-input-box .v-code {
+.v-code-wrapper .code-input-box .v-code {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,14 +18,14 @@
   margin: 0 auto;
 }
 
-.coupon-wrapper .code-input-box .v-code input {
+.v-code-wrapper .code-input-box .v-code input {
   position: absolute;
   top: -100%;
   left: -666666px;
   opacity: 0;
 }
 
-.coupon-wrapper .code-input-box .v-code .line {
+.v-code-wrapper .code-input-box .v-code .line {
   position: relative;
   margin-right: 10px;
   width: 40px;
@@ -38,7 +38,7 @@
   cursor: text;
 }
 
-.coupon-wrapper .code-input-box .v-code .line::after {
+.v-code-wrapper .code-input-box .v-code .line::after {
   display: block;
   position: absolute;
   content: "";
@@ -50,7 +50,7 @@
   transform-origin: 0 100%;
 }
 
-.coupon-wrapper .code-input-box .v-code .line.animated::before {
+.v-code-wrapper .code-input-box .v-code .line.animated::before {
   display: block;
   position: absolute;
   left: 50%;
