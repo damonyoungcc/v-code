@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>v-code</title>
+  <link rel="stylesheet" href="./main.css">
+  <script src="https://cdn.bootcss.com/vue/2.5.21/vue.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div class="coupon-wrapper">
+      <div class="code-input-box">
+        <div class="v-code">
+          <input ref="vcode" id="vcode" maxlength="6" v-model="couponCode" @focus="focused = true" @blur="focused = false"
+            @keydown="moveCursor($event)" :autofocus="false">
+          <label for="vcode" class="line" v-for="(item,index) in codeLength" :key="index" :class="{'animated': focused && cursorIndex === index}"
+            v-text="codeArr[index]">
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        couponCode: '',
+        codeLength: 6,
+        focused: false,
+      },
+      computed: {
+        codeArr() {
+          return this.couponCode.split('');
+        },
+        cursorIndex() {
+          return this.couponCode.length;
+        },
+      },
+      watch: {
+        couponCode(newVal, oldVal) {
+          const reg = /^[A-Za-z0-9]+$/;
+          if (reg.test(newVal)) {
+            this.couponCode = newVal;
+          } else {
+            this.couponCode = newVal.replace(/[^\w]/g, '');
+          }
+        },
+      },
+      methods: {
+        // 禁用方向键
+        moveCursor(event) {
+          if (event.keyCode === 37 || event.keyCode === 39 || event.keyCode === 38 || event.keyCode === 40) {
+            event.preventDefault();
+          }
+        },
+      }
+    })
+  </script>
+</body>
+
+</html>

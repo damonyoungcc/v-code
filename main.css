@@ -1,0 +1,84 @@
+.coupon-wrapper {
+  margin-top: 350px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.coupon-wrapper .code-input-box {
+  color: #2e2f33;
+  font-size: 16px;
+}
+
+.coupon-wrapper .code-input-box .v-code {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.coupon-wrapper .code-input-box .v-code input {
+  position: absolute;
+  top: -100%;
+  left: -666666px;
+  opacity: 0;
+}
+
+.coupon-wrapper .code-input-box .v-code .line {
+  position: relative;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  color: #2e2f33;
+  border: 1px solid #d8deef;
+  cursor: text;
+}
+
+.coupon-wrapper .code-input-box .v-code .line::after {
+  display: block;
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  height: 1px;
+  transform: scaleY(0.5);
+  transform-origin: 0 100%;
+}
+
+.coupon-wrapper .code-input-box .v-code .line.animated::before {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  width: 1px;
+  height: 40%;
+  content: "";
+  background-color: #2e2f33;
+  animation-name: coruscate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes coruscate {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
