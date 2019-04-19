@@ -21,7 +21,7 @@
 
 ## 优点
 基于缺点，应禁用方向键，否则会有严重bug，本组件已禁用（大部分这个思路的组件没有实现），见下面代码
-```
+```js
 // 禁用方向键
 forbidMoveCursor(event) {
   if (event.keyCode === 37 || event.keyCode === 39 || event.keyCode === 38 || event.keyCode === 40) {
@@ -35,7 +35,7 @@ forbidMoveCursor(event) {
 # 0.0.2 更新记录
 
 1. 增加了禁用Home和End键
-```
+```js
   // 禁用方向键
   // ↑、←、→、↓、Home、End
   forbidMoveCursor(event) {
