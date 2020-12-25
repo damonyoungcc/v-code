@@ -1,3 +1,9 @@
+# React版的自动聚集下一个输入框有兴趣了解一下吗？
+## 可用于验证码输入，身份证号输入等场景，写的React版本，提供的更多，效果也更好
+[Demo](https://yangdepp.gitee.io/ark/build/index.html#/autofocus)
+[源码](https://github.com/yangdepp/ark/tree/master/src/lib/components/AutoFocusNext)
+
+
 # 0.0.1 更新记录
 ## v-code 基于vue的验证码输入方案，自动聚焦下一个输入框
 
